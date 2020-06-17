@@ -1,0 +1,98 @@
+.teams-selection {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ca555f;
+    text-align: center;
+}
+
+.team__select {
+    width: 250px;
+    margin: 3px;
+    padding: 5px 5px 0 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.team__select--country {
+    height: 60px;
+    background: #f2f2f2;
+}
+
+.team__select--team {
+    height: 250px;
+    background: #fc5462;
+}
+
+.select__arrow {
+    width: 25px;
+    display: flex;
+}
+
+.select__arrow img {
+    margin: auto;
+    width: 70%;
+}
+
+.select__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select__wrapper--team {
+    flex-direction: column;
+}
+
+.select__wrapper--country {
+    flex-direction: row;
+}
+
+.select__country-name {
+    width: 130px;
+}
+
+.select__country-image {
+    flex-basis: auto;
+}
+
+.select__country-image img {
+    width: 30px;
+}
+
+.select__team-name {
+    color: #110d14;
+    margin-bottom: 25px;
+}
+
+.select__team-image {
+    width: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.versus-section {
+    height: 316px;
+    width: 75px;
+    margin: 3px 5px 3px 5px;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(125,130,134,1), rgba(255,0,0,0));
+    display: flex;
+}
+
+.versus-section p {
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-transform: uppercase;
+}
