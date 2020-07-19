@@ -25,9 +25,9 @@
 </nav>
 <section class="teams-selection-section">
     <div class="teams-selection">
-        <div class="team">
+        <div class="team home">
             <div class="team__select team__select--country">
-                <div class="select__arrow">
+                <div class="select__arrow country-arrow__left">
                     <img src="../img/navigation/left-arrow.png" alt="left arrow">
                 </div>
                 <div class="select__wrapper select__wrapper--country">
@@ -38,12 +38,12 @@
                         <img src="../img/flags/poland.png" alt="poland">
                     </div>
                 </div>
-                <div class="select__arrow">
+                <div class="select__arrow country-arrow__right">
                     <img src="../img/navigation/right-arrow.png" alt="right arrow">
                 </div>
             </div>
             <div class="team__select team__select--team">
-                <div class="select__arrow">
+                <div class="select__arrow team-arrow__left">
                     <img src="../img/navigation/left-arrow.png" alt="left arrow">
                 </div>
                 <div class="select__wrapper select__wrapper--team">
@@ -54,7 +54,7 @@
                         <img src="../img/crests/gornik.png" alt="gornik zabrze logo">
                     </div>
                 </div>
-                <div class="select__arrow">
+                <div class="select__arrow team-arrow__right">
                     <img src="../img/navigation/right-arrow.png" alt="right arrow">
                 </div>
             </div>
@@ -62,9 +62,9 @@
         <div class="versus-section">
             <p>Vs</p>
         </div>
-        <div class="team">
+        <div class="team away">
             <div class="team__select team__select--country">
-                <div class="select__arrow">
+                <div class="select__arrow country-arrow__left">
                     <img src="../img/navigation/left-arrow.png" alt="left arrow">
                 </div>
                 <div class="select__wrapper select__wrapper--country">
@@ -75,12 +75,12 @@
                         <img src="../img/flags/italy.png" alt="italy">
                     </div>
                 </div>
-                <div class="select__arrow">
+                <div class="select__arrow country-arrow__right">
                     <img src="../img/navigation/right-arrow.png" alt="right arrow">
                 </div>
             </div>
             <div class="team__select team__select--team">
-                <div class="select__arrow">
+                <div class="select__arrow team-arrow__left">
                     <img src="../img/navigation/left-arrow.png" alt="left arrow">
                 </div>
                 <div class="select__wrapper select__wrapper--team">
@@ -91,7 +91,7 @@
                         <img src="../img/crests/jeventus.png" alt="juventus turyn logo">
                     </div>
                 </div>
-                <div class="select__arrow">
+                <div class="select__arrow team-arrow__right">
                     <img src="../img/navigation/right-arrow.png" alt="right arrow">
                 </div>
             </div>
@@ -104,4 +104,160 @@
     pics from <em>https://www.futhead.com/card-generator/</em>
 </footer>
 </body>
+<script type="text/javascript">
+
+    let italy_teams = [
+        "juventus",
+        "napoli",
+        "parma",
+        "inter"
+    ]
+    let poland_teams = [
+        "gornik",
+        "piast",
+        "wisla",
+        "lech"
+    ]
+    let germany_teams = [
+        "bayern",
+        "borussia",
+        "hertha",
+        "eintracht"
+    ]
+    let england_teams = [
+        "liverpool",
+        "westham",
+        "wolves",
+        "man utd"
+    ]
+
+    let country_leagues = {
+        "italy": italy_teams,
+        "poland": poland_teams,
+        "germany": germany_teams,
+        "england": england_teams
+    };
+
+    let countries = Object.keys(country_leagues);
+    countries.sort();
+
+    // home team elements
+    let home_left_country_arrow = document.querySelector(".home .select__arrow.country-arrow__left");
+    let home_right_country_arrow = document.querySelector(".home .select__arrow.country-arrow__right");
+    let home_country = document.querySelector(".home .select__country-name");
+    let home_country_flag = document.querySelector(".home .select__country-image img");
+    let home_team = document.querySelector(".home .select__team-name");
+    let home_team_crest = document.querySelector(".home .select__team-image img");
+    let home_left_team_arrow = document.querySelector(".home .select__arrow.team-arrow__left");
+    let home_right_team_arrow = document.querySelector(".home .select__arrow.team-arrow__right");
+
+    // away team elements
+    let away_left_country_arrow = document.querySelector(".away .select__arrow.country-arrow__left");
+    let away_right_country_arrow = document.querySelector(".away .select__arrow.country-arrow__right");
+    let away_country = document.querySelector(".away .select__country-name");
+    let away_country_flag = document.querySelector(".away .select__country-image img");
+    let away_team = document.querySelector(".away .select__team-name");
+    let away_team_crest = document.querySelector(".away .select__team-image img");
+    let away_left_team_arrow = document.querySelector(".away .select__arrow.team-arrow__left");
+    let away_right_team_arrow = document.querySelector(".away .select__arrow.team-arrow__right");
+
+    // home side default values
+    let a = 0;
+    home_country.textContent = countries[a];
+    let home_default_team = country_leagues[countries[a]].sort()
+    home_team.textContent = home_default_team[0];
+    home_country_flag.src = "../img/flags/"+home_country.textContent+".png";
+    home_team_crest.src = "../img/crests/"+home_team.textContent+".png";
+
+    // away side default values
+    let b = 1;
+    away_country.textContent = countries[b];
+    let away_default_team = country_leagues[countries[b]].sort()
+    away_team.textContent = away_default_team[0];
+    away_country_flag.src = "../img/flags/"+away_country.textContent+".png";
+    away_team_crest.src = "../img/crests/"+away_team.textContent+".png";
+
+    home_left_country_arrow.addEventListener('click', function(){
+        a = a-1;
+        if (a === -1) {a = countries.length-1}
+        home_country.textContent = countries[a];
+        home_country_flag.src = "../img/flags/"+home_country.textContent+".png";
+        let teams = country_leagues[countries[a]].sort();
+        home_team.textContent = teams[0];
+        home_team_crest.src = "../img/crests/"+home_team.textContent+".png";
+
+    })
+    home_right_country_arrow.addEventListener('click', function(){
+        a = (a+1)%countries.length;
+        home_country.textContent = countries[a];
+        home_country_flag.src = "../img/flags/"+home_country.textContent+".png";
+        let teams = country_leagues[countries[a]].sort();
+        home_team.textContent = teams[0];
+        home_team_crest.src = "../img/crests/"+home_team.textContent+".png";
+    })
+
+    home_left_team_arrow.addEventListener('click', function () {
+        let current_country = home_country.textContent;
+        let current_team = home_team.textContent;
+        let league_list = country_leagues[current_country];
+        let index = league_list.indexOf(current_team);
+        index = index - 1;
+        if (index === -1) {index = league_list.length-1}
+        home_team.textContent = league_list[index];
+        home_team_crest.src = "../img/crests/"+home_team.textContent+".png";
+    })
+
+    home_right_team_arrow.addEventListener('click', function () {
+        let current_country = home_country.textContent;
+        let current_team = home_team.textContent;
+        let league_list = country_leagues[current_country];
+        let index = league_list.indexOf(current_team);
+        index = (index+1)%league_list.length;
+        home_team.textContent = league_list[index];
+        home_team_crest.src = "../img/crests/"+home_team.textContent+".png";
+    })
+
+    away_left_country_arrow.addEventListener('click', function(){
+        b = b-1;
+        if (b === -1) {b = countries.length-1}
+        away_country.textContent = countries[b];
+        away_country_flag.src = "../img/flags/"+away_country.textContent+".png";
+        let teams = country_leagues[countries[b]].sort();
+        away_team.textContent = teams[0];
+        away_team_crest.src = "../img/crests/"+away_team.textContent+".png";
+
+    })
+
+    away_right_country_arrow.addEventListener('click', function(){
+        b = (b+1)%countries.length;
+        away_country.textContent = countries[b];
+        away_country_flag.src = "../img/flags/"+away_country.textContent+".png";
+        let teams = country_leagues[countries[b]].sort();
+        away_team.textContent = teams[0];
+        away_team_crest.src = "../img/crests/"+away_team.textContent+".png";
+    })
+
+    away_left_team_arrow.addEventListener('click', function () {
+        let current_country = away_country.textContent;
+        let current_team = away_team.textContent;
+        let league_list = country_leagues[current_country];
+        let index = league_list.indexOf(current_team);
+        index = index - 1;
+        if (index === -1) {index = league_list.length-1}
+        away_team.textContent = league_list[index];
+        away_team_crest.src = "../img/crests/"+away_team.textContent+".png";
+    })
+
+    away_right_team_arrow.addEventListener('click', function () {
+        let current_country = away_country.textContent;
+        let current_team = away_team.textContent;
+        let league_list = country_leagues[current_country];
+        let index = league_list.indexOf(current_team);
+        index = (index+1)%league_list.length;
+        away_team.textContent = league_list[index];
+        away_team_crest.src = "../img/crests/"+away_team.textContent+".png";
+    })
+
+
+</script>
 </html>
