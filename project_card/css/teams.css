@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-.teams-selections__team-select {
+.teams-selection__team-select {
     width: 250px;
     margin: 3px;
     padding: 5px 5px 0 5px;
@@ -21,7 +21,7 @@
     flex-direction: row;
 }
 
-.teams-selections__team-select--country {
+.teams-selection__team-select--country {
     height: 60px;
     background: #f2f2f2;
 }
@@ -31,49 +31,49 @@
     background: #fc5462;
 }
 
-.teams-selection__select-arrow {
+.teams-selection__arrow {
     width: 25px;
     display: flex;
 }
 
-.teams-selection__select-arrow img {
+.teams-selection__arrow img {
     margin: auto;
     width: 70%;
 }
 
-.teams-selection__select-wrapper {
+.teams-selection__wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.teams-selection__select-wrapper--team {
+.teams-selection__wrapper--team {
     flex-direction: column;
 }
 
-.teams-selection__select-wrapper--country {
+.teams-selection__wrapper--country {
     flex-direction: row;
 }
 
-.teams-selection__select-country--name {
+.teams-selection__country-name {
     width: 130px;
 }
 
-.teams-selection__select-country--image {
+.teams-selection__country-image {
     flex-basis: auto;
 }
 
-.teams-selection__select-country--image img {
+.teams-selection__country-image img {
     width: 30px;
 }
 
-.teams-selection__select-team--name {
+.teams-selection__team--name {
     color: #110d14;
     margin-bottom: 25px;
 }
 
-.teams-selection__select-team--image {
+.teams-selection__team--image {
     width: 50px;
     margin-bottom: 25px;
     display: flex;
