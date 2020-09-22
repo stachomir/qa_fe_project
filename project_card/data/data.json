@@ -1,0 +1,153 @@
+{
+  "leagues": [
+    {
+      "id": "l001",
+      "name": "serie a",
+      "image": "serie_a",
+      "alt": "Serie A crest",
+      "teams": [
+        {"id": "t001",
+          "name": "juventus",
+          "full_name": "Juventus Turyn",
+          "crest_alt": "Juventus crest"
+        },
+        {"id": "t002",
+          "name": "parma",
+          "full_name": "AC Parma",
+          "crest_alt": "Parma crest"
+        }
+      ]
+    },
+    {
+      "id": "l002",
+      "name": "bundesliga",
+      "image": "bundesliga",
+      "alt": "Bundesliga crest",
+      "teams": [
+        {"id": "t051",
+          "name": "bayern",
+          "full_name": "Bayern Monachium",
+          "crest_alt": "Bayern crest"
+        }
+      ]
+    },
+    {
+      "id": "l003",
+      "name": "ekstraklasa",
+      "image": "ekstraklasa",
+      "alt": "Ekstraklasa crest",
+      "teams": [
+        {"id": "t101",
+          "name": "liverpool",
+          "full_name": "FC Liverpool",
+          "crest_alt": "Liverpool crest"
+        }
+      ]
+    },
+    {
+      "id": "l004",
+      "name": "premier league",
+      "image": "premier_league",
+      "alt": "Premier League crest",
+      "teams": [
+        {"id": "t151",
+          "name": "gornik",
+          "full_name": "Górnik Zabrze",
+          "crest_alt": "Gornik crest"
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "id": "c001",
+      "name": "poland",
+      "alt": "Poland crest"
+    },
+    {
+      "id": "c002",
+      "name": "germany",
+      "alt": "Germany crest"
+    },
+    {
+      "id": "c003",
+      "name": "france",
+      "alt": "France crest"
+    },
+    {
+      "id": "c004",
+      "name": "england",
+      "alt": "England crest"
+    },
+    {
+      "id": "c005",
+      "name": "brasil",
+      "alt": "Brasil crest"
+    },
+    {
+      "id": "c006",
+      "name": "portugal",
+      "alt": "Portugal crest"
+    },
+    {
+      "id": "c007",
+      "name": "colombia",
+      "alt": "Colombia crest"
+    },
+    {
+      "id": "c008",
+      "name": "italy",
+      "alt": "Italy crest"
+    },
+    {
+      "id": "c009",
+      "name": "netherland",
+      "alt": "Netherland crest"
+    },
+    {
+      "id": "c010",
+      "name": "egypt",
+      "alt": "Egypt crest"
+    },
+    {
+      "id": "c011",
+      "name": "spain",
+      "alt": "Spain crest"
+    }
+  ],
+  "players": [
+    {
+      "id": "p001",
+      "surname": "Lewandowski",
+      "full_name": "Robert Lewandowski",
+      "country": "c001",
+      "team": "t051",
+      "position": "CF",
+      "image": "lewandowski",
+      "alt_image": "Lewandowski image",
+      "metrics": {
+        "overall": "90",
+        "attack": "96",
+        "defence": "61",
+        "stamina": "80"
+      }
+    },
+    {
+      "id": "p002",
+      "surname": "",
+      "full_name": "",
+      "country": "",
+      "team": "",
+      "position": "",
+      "image": "",
+      "alt_image": "",
+      "metrics": {
+        "overall": "",
+        "attack": "",
+        "defence": "",
+        "stamina": ""
+      }
+    }
+
+  ]
+}

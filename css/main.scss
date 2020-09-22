@@ -1,5 +1,11 @@
 $navigation-bar-color: #0079bf;
-$basic-border-color: 20px solid gray;
+$basic-border: 20px solid gray;
+$project1-border: 20px solid yellow;
+$project2-border: 20px solid indianred;
+$project3-border: 20px solid turquoise;
+$project4-border: 20px solid orangered;
+$project5-border: 20px solid sandybrown;
+
 
 body {
   margin: 0;
@@ -58,18 +64,26 @@ body {
   .portfolio__project1 {
     & .portfolio__project-icon {
       & img {
-        height: 130px;
+        background-color: red;
+        height: 150px;
       }
     }
     & .portfolio__project-name {
-      font-size: 30px;
+      font-size: 40px;
+    }
+  }
+
+  .portfolio__project5 {
+    border: $basic-border;
+    &:hover {
+      border: $project5-border;
     }
   }
 }
 
 .portfolio__project1 {
   grid-area: pr-1;
-  border: $basic-border-color;
+  border: $basic-border;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -99,7 +113,7 @@ body {
 
 .portfolio__project2 {
   grid-area: pr-2;
-  border: $basic-border-color;
+  border: $basic-border;
   &:hover {
     border-color: indianred;
   }
@@ -107,7 +121,7 @@ body {
 
 .portfolio__project3 {
   grid-area: pr-3;
-  border: $basic-border-color;
+  border: $basic-border;
   &:hover {
     border-color: turquoise;
   }
@@ -115,7 +129,7 @@ body {
 
 .portfolio__project4 {
   grid-area: pr-4;
-  border: $basic-border-color;
+  border: $basic-border;
   &:hover {
     border-color: orangered;
   }
@@ -124,8 +138,5 @@ body {
 
 .portfolio__project5 {
   grid-area: pr-5;
-  border: $basic-border-color;
-  &:hover {
-    border-color: sandybrown;
-  }
+  border: $project5-border;
 }

@@ -39,10 +39,18 @@ body {
   }
 
   .portfolio__project1 .portfolio__project-icon img {
-    height: 130px;
+    background-color: red;
+    height: 150px;
   }
   .portfolio__project1 .portfolio__project-name {
-    font-size: 30px;
+    font-size: 40px;
+  }
+
+  .portfolio__project5 {
+    border: 20px solid gray;
+  }
+  .portfolio__project5:hover {
+    border: 20px solid sandybrown;
   }
 }
 .portfolio__project1 {
@@ -101,10 +109,7 @@ body {
 
 .portfolio__project5 {
   grid-area: pr-5;
-  border: 20px solid gray;
-}
-.portfolio__project5:hover {
-  border-color: sandybrown;
+  border: 20px solid sandybrown;
 }
 
 /*# sourceMappingURL=main.css.map */
