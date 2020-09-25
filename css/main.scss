@@ -1,21 +1,18 @@
-$navigation-bar-color: #0079bf;
 $basic-border: 20px solid gray;
 $project1-border: 20px solid yellow;
-$project2-border: 20px solid indianred;
+$project2-border: 20px solid blue;
 $project3-border: 20px solid turquoise;
 $project4-border: 20px solid orangered;
-$project5-border: 20px solid sandybrown;
+$project5-border: 20px solid orange;
 
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navigation-bar {
-  margin: 0 auto;
-  width: 100%;
-  height: 90px;
-  background-color: $navigation-bar-color;
+body  {
+  overflow-x: hidden;
 }
 
 .portfolio {
@@ -25,71 +22,24 @@ body {
   display: grid;
   gap: 5px 5px;
   grid-template-columns: 100%;
-  grid-template-rows: 120px repeat(5, 120px) auto;
+  grid-template-rows: 120px repeat(4, 120px) auto;
   grid-template-areas:
           "pr-1"
           "pr-2"
           "pr-3"
           "pr-4"
           "pr-5";
-}
-
-@media (min-width: 420px) {
-  .portfolio {
-    width: 400px;
-    display: grid;
-    grid-template-columns: 200px repeat(2, 200px) auto;
-    grid-template-rows: 120px repeat(5, 120px) auto;
-    grid-template-areas:
-            "pr-1 pr-1"
-            "pr-2 pr-3"
-            "pr-2 pr-3"
-            "pr-4 pr-4"
-            "pr-5 pr-5";
-    }
-}
-
-@media screen and (min-width: 700px) {
-  .portfolio {
-    width: 660px;
-    display: grid;
-    grid-template-columns: 220px repeat(3, 220px) auto;
-    grid-template-rows: 250px repeat(2, 250px) auto;
-    grid-template-areas:
-            "pr-1 pr-1 pr-2"
-            "pr-3 pr-4 pr-4"
-            ". pr-5 .";
-  }
-
-  .portfolio__project1 {
-    & .portfolio__project-icon {
-      & img {
-        background-color: red;
-        height: 150px;
-      }
-    }
-    & .portfolio__project-name {
-      font-size: 40px;
-    }
-  }
-
-  .portfolio__project5 {
-    border: $basic-border;
-    &:hover {
-      border: $project5-border;
-    }
+  & div {
+    cursor: pointer;
   }
 }
 
 .portfolio__project1 {
   grid-area: pr-1;
-  border: $basic-border;
+  border: $project1-border;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  &:hover {
-    border-color: yellow;
-  }
   & .portfolio__project-icon {
     height: 100%;
     width: 50%;
@@ -113,30 +63,91 @@ body {
 
 .portfolio__project2 {
   grid-area: pr-2;
-  border: $basic-border;
-  &:hover {
-    border-color: indianred;
-  }
+  border: $project2-border;
 }
 
 .portfolio__project3 {
   grid-area: pr-3;
-  border: $basic-border;
-  &:hover {
-    border-color: turquoise;
-  }
+  border: $project3-border;
 }
 
 .portfolio__project4 {
   grid-area: pr-4;
-  border: $basic-border;
-  &:hover {
-    border-color: orangered;
-  }
-
+  border: $project4-border;
 }
 
 .portfolio__project5 {
   grid-area: pr-5;
   border: $project5-border;
+}
+
+@media (min-width: 420px) {
+  .portfolio {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 200px repeat(1, 200px) auto;
+    grid-template-rows: 120px repeat(5, 120px) auto;
+    grid-template-areas:
+            "pr-1 pr-1"
+            "pr-2 pr-3"
+            "pr-2 pr-3"
+            "pr-4 pr-4"
+            "pr-5 pr-5";
+    }
+}
+
+@media screen and (min-width: 700px) {
+  .portfolio {
+    width: 660px;
+    display: grid;
+    grid-template-columns: 220px repeat(2, 220px) auto;
+    grid-template-rows: 250px repeat(2, 250px) auto;
+    grid-template-areas:
+            "pr-1 pr-1 pr-2"
+            "pr-3 pr-4 pr-4"
+            ". pr-5 .";
+  }
+
+  .portfolio__project1 {
+    border: $basic-border;
+    &:hover {
+      border: $project1-border;
+    }
+    & .portfolio__project-icon {
+      & img {
+        height: 150px;
+      }
+    }
+    & .portfolio__project-name {
+      font-size: 40px;
+    }
+  }
+
+  .portfolio__project2 {
+    border: $basic-border;
+    &:hover {
+      border: $project2-border;
+    }
+  }
+
+  .portfolio__project3 {
+    border: $basic-border;
+    &:hover {
+      border: $project3-border;
+    }
+  }
+
+  .portfolio__project4 {
+    border: $basic-border;
+    &:hover {
+      border: $project4-border;
+    }
+  }
+
+  .portfolio__project5 {
+    border: $basic-border;
+    &:hover {
+      border: $project5-border;
+    }
+  }
 }
