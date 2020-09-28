@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .navigation {
   margin: 0 auto;
   width: 100%;
@@ -25,34 +29,58 @@
   justify-content: space-around;
   width: 60%;
   transform: translateX(100%);
-  transition: transform 0.5s ease-in;
+  transition: transform 0.3s ease-in;
 }
 .navigation__list--active {
   transform: translateX(0%);
 }
 .navigation__list li {
   font-family: "Josefin Sans", sans-serif;
-  text-decoration: none;
   list-style: none;
-  color: lightcyan;
   font-size: 12px;
   letter-spacing: 6px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  opacity: 1;
+}
+.navigation__list li a {
+  text-decoration: none;
+  color: lightcyan;
 }
 .navigation__burger {
   display: block;
   cursor: pointer;
 }
+.navigation__burger--toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+.navigation__burger--toggle .line2 {
+  opacity: 0;
+}
+.navigation__burger--toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
 .navigation__burger div {
-  height: 3px;
-  width: 25px;
+  height: 5px;
+  width: 30px;
   background-color: lightcyan;
   margin: 5px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-@media all and (min-width: 420px) {
+@keyframes navigationLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@media only screen and (min-width: 420px) {
   .navigation__logo {
     font-size: 30px;
   }
@@ -63,7 +91,7 @@
     font-size: 10px;
   }
 }
-@media screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
   .navigation__logo {
     font-size: 40px;
   }
@@ -76,6 +104,9 @@
     flex-direction: row;
     justify-content: space-around;
     transform: translateX(0%);
+  }
+  .navigation__list li {
+    opacity: 1;
   }
   .navigation__burger {
     display: none;

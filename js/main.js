@@ -8,6 +8,9 @@ project1_banner.addEventListener('click', function(){
 
 
 
+
+
+
 // example functions to attach html
 
 function attachHTML(container, content) {
