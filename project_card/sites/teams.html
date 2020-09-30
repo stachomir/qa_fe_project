@@ -7,25 +7,31 @@
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/teams.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <div class="header__logo">
-        <img src="../img/logo.png" alt="project logo">
-    </div>
-    <div class="header__menu">
-        <nav class="navigation">
-            <a href="../index.html">
-                <button type="button" class="navigation__button">main page</button>
-            </a>
-        </nav>
-        <nav class="navigation">
-            <a href="../sites/team-squad.html">
-                <button type="button" class="navigation__button">squads</button>
-            </a>
-        </nav>
-    </div>
-</header>
+    <nav class="navBar">
+        <div class="navBar__logo">
+            <img src="../img/logo.png" alt="project logo" />
+        </div>
+        <ul class="navBar__list">
+            <li>
+                <a href="../index.html">top<br>players</a>
+            </li>
+            <li>
+                <a href="#">teams<br>selection</a>
+            </li>
+            <li>
+                <a href="team-squad.html">team<br>squad</a>
+            </li>
+        </ul>
+        <div class="navBar__burger">
+            <div class="navBar__line1"></div>
+            <div class="navBar__line2"></div>
+            <div class="navBar__line3"></div>
+        </div>
+    </nav>
 <section class="teams-selection-section">
     <div class="teams-selection">
         <div class="teams-selection__team teams-selection__team--home">

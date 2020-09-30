@@ -9,25 +9,31 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" media="(min-width:601px)" href="../css/player-card.css">
     <link rel="stylesheet" media="(max-width:600px)" href="../css/player-card-small.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <div class="header__logo">
-        <img src="../img/logo.png" alt="project logo">
-    </div>
-    <div class="header__menu">
-        <nav class="navigation">
-            <a href="../index.html">
-                <button type="button" class="navigation__button">main page</button>
-            </a>
-        </nav>
-        <nav class="navigation">
-            <a href="../sites/teams.html">
-                <button type="button" class="navigation__button">teams selection</button>
-            </a>
-        </nav>
-    </div>
-</header>
+    <nav class="navBar">
+        <div class="navBar__logo">
+            <img src="../img/logo.png" alt="project logo" />
+        </div>
+        <ul class="navBar__list">
+            <li>
+                <a href="../index.html">top<br>players</a>
+            </li>
+            <li>
+                <a href="teams.html">teams<br>selection</a>
+            </li>
+            <li>
+                <a href="#">team<br>squad</a>
+            </li>
+        </ul>
+        <div class="navBar__burger">
+            <div class="navBar__line1"></div>
+            <div class="navBar__line2"></div>
+            <div class="navBar__line3"></div>
+        </div>
+    </nav>
 <section class="first-eleven">
     <div class="players-card-container">
         <div class="player-card player-card--active first">

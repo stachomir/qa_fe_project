@@ -1,0 +1,117 @@
+$top_players_section_main_background_color: #575f62;
+$top_players_section_second_background_color: #f2f2f2;
+$filtering-font-color: #8B0000;
+$filtering-font-family: 'Indie Flower', cursive;
+
+.top-players {
+  width:90%;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: $top_players_section_second_background_color;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+
+  &__header {
+    height:70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $filtering-font-color;
+
+    &-title {
+      width: 100%;
+      height: 50%;
+      & p {
+        font-size: 17px;
+        text-align: center;
+        font-family: $filtering-font-family;
+      }
+    }
+
+    &-sorting {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      & ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 15px;
+
+        & li {
+          font-family: $filtering-font-family;
+        }
+      }
+    }
+  }
+
+  &__body {
+    background-color: $top_players_section_main_background_color;
+    height:400px;
+    //width: 100%;
+    margin: 0 3px 3px 3px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .top-players {
+    width:700px;
+    margin: 20px auto;
+
+    &__header {
+      height:80px;
+
+      &-title {
+        & p {
+          font-size: 19px;
+        }
+      }
+
+      &-sorting {
+        & ul {
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__body {
+      height:400px;
+      margin: 0 4px 4px 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .top-players {
+    width:840px;
+
+    &__header {
+
+      &-title {
+        & p {
+          font-size: 20px;
+        }
+      }
+
+      &-sorting {
+        & ul {
+          width: 100%;
+          font-size: 19px;
+        }
+      }
+    }
+
+    &__body {
+      height:400px;
+      margin: 0 5px 5px 5px;
+    }
+  }
+}

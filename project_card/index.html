@@ -9,30 +9,56 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/player-card.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/top_players.css">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#fafafa">
+  <!--  <meta name="theme-color" content="#fafafa">-->
 </head>
+<div class="background-image"></div>
 
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-  <div class="main">
-    <header class="header">
-      <div class="header__logo">
-        <img src="img/logo.png" alt="project logo">
+  <nav class="navBar">
+    <div class="navBar__logo">
+      <img src="img/logo.png" alt="project logo" />
+    </div>
+    <ul class="navBar__list">
+      <li>
+        <a href="#">top<br>players</a>
+      </li>
+      <li>
+        <a href="sites/teams.html">teams<br>selection</a>
+      </li>
+      <li>
+        <a href="sites/team-squad.html">team<br>squad</a>
+      </li>
+    </ul>
+    <div class="navBar__burger">
+      <div class="navBar__line1"></div>
+      <div class="navBar__line2"></div>
+      <div class="navBar__line3"></div>
+    </div>
+  </nav>
+  <section class="top-players">
+    <div class="top-players__header">
+      <div class="top-players__header-title">
+        <p>Let's see top players sorted by</p>
       </div>
-      <div class="header__menu">
-        <nav class="navigation">
-          <a href="sites/teams.html">
-            <button type="button"  class="navigation__button">teams selection</button>
-          </a>
-        </nav>
-        <nav class="navigation">
-        </nav>
+      <div class="top-players__header-sorting">
+        <ul>
+          <li>general</li>
+          <li>attack</li>
+          <li>defence</li>
+          <li>stamina</li>
+        </ul>
       </div>
-    </header>
+    </div>
+    <div class="top-players__body">
+    </div>
+  </section>
 
+
+  <div class="main">
     <section class="best-players">
       <div class="players-card-container">
         <div class="player-card">

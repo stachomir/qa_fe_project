@@ -5,8 +5,26 @@
   box-sizing: border-box;
 }
 
+
+.background-image {
+  content: "";
+  background-image: url("../img/crests/liverpool.png") , url("../img/crests/gornik.png"), url("../img/crests/inter.png"), url("../img/crests/juventus.png");
+  background-size: auto 20%;
+  background-repeat: repeat-x;
+  background-position: top 10px left 25px, top 170px left 25px, top 320px left 25px, top 470px left 25px;
+  opacity: 0.1;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 body {
-  background: linear-gradient(90deg, #a6a6a4 50%, #b2b3ae 0);
+  background: #b2b3ae;
+  /*background: linear-gradient(90deg, #a6a6a4 50%, #b2b3ae 0);*/
   background-size: 30px 100%;;
 }
 
