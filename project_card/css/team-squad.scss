@@ -1,0 +1,174 @@
+$squad-section-main-background-color: #575f62;
+$squad-section-second-background-color: #f2f2f2;
+$teams-filtering-background: #8B0000;
+$teams_filtering-font: #f2f2f2;
+$filtering-font-color: #8B0000;
+$filtering-font-family: 'Indie Flower', cursive;
+
+.squad {
+  width:90%;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: $squad-section-second-background-color;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+
+  &__arrow {
+    width: 15%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+    &--left {
+      background-image: url("../img/navigation/left-arrow-white.png");
+
+    }
+    &--right {
+      background-image: url("../img/navigation/right-arrow-white.png");
+    }
+  }
+
+  &__select {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    &--crest {
+      width: 40%;
+      height: 100%;
+      display: flex;
+
+      & img {
+        height: 75%;
+        margin: auto;
+      }
+    }
+    &--name {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__header {
+    height:70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $filtering-font-color;
+
+    &-league {
+      width: 100%;
+      height: 45%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      color: $teams_filtering-font;
+      background: $teams-filtering-background;
+      border-radius: 45px;
+      margin-bottom: 1px;
+    }
+
+    &-team {
+      width: 100%;
+      height: 45%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      color: $teams_filtering-font;
+      background: $teams-filtering-background;
+      border-radius: 45px;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__body {
+    background-color: $squad-section-main-background-color;
+    height:400px;
+    //width: 100%;
+    margin: 0 3px 0 3px;
+
+  }
+
+  &__footer {
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .squad {
+    &__arrow {
+    }
+
+    &__select {
+      &--crest {
+        & img {
+        }
+      }
+
+      &--name {
+      }
+    }
+
+    &__header {
+      margin: 0 auto;
+      width: 360px;
+      &-league {
+      }
+
+      &-team {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .squad {
+    width:700px;
+    margin: 30px auto;
+
+    &__header {
+      height:80px;
+
+      &-league {
+      }
+
+      &-team {
+      }
+    }
+
+    &__body {
+      margin: 0 4px 0 4px;
+    }
+
+    &__footer {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .squad {
+    width:840px;
+    margin: 40px auto;
+
+    &__header {
+      height:80px;
+
+      &-league {
+      }
+
+      &-team {
+      }
+    }
+
+    &__body {
+      margin: 0 5px 0 5px;
+    }
+
+    &__footer {
+      height: 50px;
+    }
+  }
+}
