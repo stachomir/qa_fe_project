@@ -38,9 +38,9 @@
       "alt": "Ekstraklasa crest",
       "teams": [
         {"id": "t101",
-          "name": "liverpool",
-          "full_name": "FC Liverpool",
-          "crest_alt": "Liverpool crest"
+          "name": "gornik",
+          "full_name": "Gornik Zabrze",
+          "crest_alt": "Gornik crest"
         }
       ]
     },
@@ -51,9 +51,9 @@
       "alt": "Premier League crest",
       "teams": [
         {"id": "t151",
-          "name": "gornik",
-          "full_name": "Górnik Zabrze",
-          "crest_alt": "Gornik crest"
+          "name": "Liverpool",
+          "full_name": "FC Liverpool",
+          "crest_alt": "Liverpool crest"
         }
       ]
     }

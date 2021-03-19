@@ -1,34 +1,7 @@
-let serie_a = [
-    "juventus",
-    "napoli",
-    "parma",
-    "inter"
-]
-let ekstraklasa = [
-    "gornik",
-    "piast",
-    "wisla",
-    "lech"
-]
-let bundesliga = [
-    "bayern",
-    "borussia",
-    "hertha",
-    "eintracht"
-]
-let premier_league = [
-    "liverpool",
-    "westham",
-    "wolves",
-    "man utd"
-]
 
-let country_leagues = {
-    "italy": serie_a,
-    "poland": ekstraklasa,
-    "germany": bundesliga,
-    "england": premier_league
-};
+
+
+
 
 let countries = Object.keys(country_leagues);
 countries.sort();
