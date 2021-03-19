@@ -1,0 +1,118 @@
+.squad {
+  width: 90%;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+.squad__arrow {
+  width: 15%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+}
+.squad__arrow--left {
+  background-image: url("../img/navigation/left-arrow-white.png");
+}
+.squad__arrow--right {
+  background-image: url("../img/navigation/right-arrow-white.png");
+}
+.squad__select {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.squad__select--crest {
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+.squad__select--crest img {
+  height: 75%;
+  margin: auto;
+}
+.squad__select--name {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.squad__header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #8B0000;
+}
+.squad__header-league {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #f2f2f2;
+  background: #8B0000;
+  border-radius: 45px;
+  margin-bottom: 1px;
+}
+.squad__header-team {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #f2f2f2;
+  background: #8B0000;
+  border-radius: 45px;
+  margin-bottom: 1px;
+}
+.squad__body {
+  background-color: #575f62;
+  height: 400px;
+  margin: 0 3px 0 3px;
+}
+.squad__footer {
+  height: 50px;
+}
+
+@media screen and (min-width: 420px) {
+  .squad__header {
+    margin: 0 auto;
+    width: 360px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .squad {
+    width: 700px;
+    margin: 30px auto;
+  }
+  .squad__header {
+    height: 80px;
+  }
+  .squad__body {
+    margin: 0 4px 0 4px;
+  }
+  .squad__footer {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .squad {
+    width: 840px;
+    margin: 40px auto;
+  }
+  .squad__header {
+    height: 80px;
+  }
+  .squad__body {
+    margin: 0 5px 0 5px;
+  }
+  .squad__footer {
+    height: 50px;
+  }
+}
+
+/*# sourceMappingURL=team-squad.css.map */

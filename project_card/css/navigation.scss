@@ -1,0 +1,146 @@
+$navigation-background: #f2f2f2;
+$navigation-font-color: #8B0000;
+$navigation-background-hover: #f2f200;
+
+.navBar {
+  background-color: $navigation-background;
+  margin-top: 30px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+
+  &__logo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    & img {
+      height: 65px;
+      margin: auto;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    justify-content: space-around;
+
+    & li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      & a {
+        font-family: 'Indie Flower', cursive;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        text-align: center;
+        color: $navigation-font-color;
+        display: flex;
+
+      }
+    }
+  }
+
+  &__burger{
+
+    & div {
+
+    }
+  }
+}
+
+@media screen and (min-width: 420px){
+  .navBar {
+    height: 85px;
+
+    &__logo {
+      width: 30%;
+
+      & img {
+        height: 75px;
+      }
+    }
+    &__list {
+      width: 70%;
+
+      & li {
+        & a {
+          font-size: 18px;
+        }
+      }
+    }
+    &__burger{
+      & div {
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px){
+  .navBar {
+    width: 700px;
+    height: 90px;
+    margin: 30px auto;
+    &__logo {
+      width: 35%;
+      & img {
+        height: 78px;
+      }
+    }
+    &__list {
+      & li {
+        width: 100%;
+
+        &:hover{
+          background-color: $navigation-background-hover;
+        & a {
+          display: flex;
+          justify-items: center;
+          font-size: 20px;
+          }
+        }
+      }
+    }
+    &__burger{
+      & div {
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .navBar {
+    width: 840px;
+
+    &__logo {
+      width: 35%;
+      & img {
+        height: 78px;
+      }
+    }
+    &__list {
+      & li {
+        & a {
+          font-size: 20px;
+        }
+      }
+    }
+    &__burger{
+      & div {
+
+      }
+    }
+  }
+}
